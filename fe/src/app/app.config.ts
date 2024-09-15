@@ -5,10 +5,10 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {provideStore} from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import {reducers} from "./items/state/items.reducer";
+import { provideEffects } from '@ngrx/effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync(),
-    provideStore(reducers),
-    provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })]
+    provideStore(),
+    provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }), provideEffects()]
 };

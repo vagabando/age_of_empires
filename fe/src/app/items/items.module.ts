@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ItemsRoutingModule } from './items-routing.module';
 import {UiModule} from "../../../projects/fe-lib/src/lib/ui/ui.module";
 import {ItemsComponent} from "./items.component";
-import { StoreModule } from '@ngrx/store';
-import * as fromItems from './state/items.reducer';
+import {ItemService} from "./services/item.service";
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import * as fromItems from './state/items.reducer';
     CommonModule,
     UiModule,
     ItemsRoutingModule,
-    StoreModule.forFeature(fromItems.itemsesFeatureKey, fromItems.reducer),
-    StoreModule.forFeature(fromItems.itemsesFeatureKey, fromItems.reducer)
-  ]
+  ],
+  providers:[ItemService]
 })
 export class ItemsModule { }
