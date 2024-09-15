@@ -124,6 +124,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "tsConfig": "projects/fe-lib/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
@@ -135,6 +136,10 @@
     }
   },
   "cli": {
-    "analytics": "b2aeda83-0425-4a20-be03-456d79d1eb82"
+    "analytics": "b2aeda83-0425-4a20-be03-456d79d1eb82",
+    "schematicCollections": [
+      "@angular-eslint/schematics",
+      "@ngrx/schematics"
+    ]
   }
 }
