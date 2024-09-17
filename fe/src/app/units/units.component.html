@@ -1,0 +1,13 @@
+<!--<ng-container *ngIf="loader">-->
+<!--  <mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+<!--</ng-container>-->
+<router-outlet/>
+
+<div *ngIf="units$ |async as unitList; else noList;">
+  <div *ngFor="let item of unitList">
+    {{item.name}}
+  </div>
+</div>
+<ng-template #noList>
+  No Data
+</ng-template>

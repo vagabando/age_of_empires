@@ -9,7 +9,7 @@
     "paths": {
       "fe-lib": [
         "./dist/fe-lib"
-      ]
+      ],
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
