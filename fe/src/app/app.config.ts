@@ -1,8 +1,13 @@
-import {ApplicationConfig, isDevMode, provideZoneChangeDetection} from '@angular/core';
+import {
+  ApplicationConfig, importProvidersFrom,
+  isDevMode,
+  provideExperimentalZonelessChangeDetection,
+  provideZoneChangeDetection
+} from '@angular/core';
 import {provideRouter} from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {provideHttpClient} from "@angular/common/http";
+import {HttpClientModule, provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 import {provideHttpClientTesting} from "@angular/common/http/testing";
 import {provideState, provideStore} from "@ngrx/store";
 import {provideStoreDevtools} from "@ngrx/store-devtools";
@@ -18,8 +23,9 @@ export const appConfig: ApplicationConfig = {
     provideEffects(UnitEffects),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(),
-    provideHttpClientTesting(),
+    provideHttpClient(
+      withInterceptorsFromDi(),
+    ),
     provideAnimationsAsync(),
   ]
 };

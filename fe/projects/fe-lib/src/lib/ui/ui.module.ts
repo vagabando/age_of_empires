@@ -9,7 +9,7 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {
   MatCardModule,
 } from "@angular/material/card";
-import {MatInputModule} from "@angular/material/input";
+import {MatFormField, MatInput, MatInputModule} from "@angular/material/input";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSelectModule} from "@angular/material/select";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -19,11 +19,34 @@ import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import {MatTableModule} from "@angular/material/table";
+import {
+  MatCell,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderRow,
+  MatNoDataRow, MatRow,
+  MatTable,
+  MatTableModule
+} from "@angular/material/table";
 import {LayoutModule} from "@angular/cdk/layout";
 import {MatTooltipModule} from "@angular/material/tooltip";
-
+import {MatProgressBar} from "@angular/material/progress-bar";
+import {MatCard, MatCardHeader, MatCardContent} from "@angular/material/card";
+import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
+import {MatPaginator} from "@angular/material/paginator";
+import {MatList, MatListItem} from "@angular/material/list";
 const modules = [
+  MatList, MatListItem,
+  MatPaginator,
+  MatNoDataRow,
+  MatColumnDef,
+  MatHeaderCell,
+  MatCell,
+  MatHeaderRow,
+  MatRow,
+  MatCard, MatCardContent, MatCardHeader,
+  MatTable, MatInput,
+  MatFormField,
   CommonModule,
   MatIconModule,
   MatButtonModule,
@@ -31,6 +54,7 @@ const modules = [
   MatInputModule,
   MatFormFieldModule,
   MatRadioModule,
+  MatProgressBar,
   MatSelectModule,
   MatSliderModule,
   MatSlideToggleModule,
@@ -45,6 +69,9 @@ const modules = [
   MatTooltipModule,
   MatTableModule,
   LayoutModule,
+  FlexLayoutModule,
+  FlexModule
+
 ];
 @NgModule({
   declarations: [],

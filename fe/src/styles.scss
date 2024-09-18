@@ -8,3 +8,35 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 mat-toolbar {
   line-height: 56px!important;
 }
+
+.text-center {
+  text-align: center;
+}
+.m-t-10 {
+  margin-top: 10px;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+}
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.text-red {
+  color: red;
+}
+td, th {
+  width: 25%;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}

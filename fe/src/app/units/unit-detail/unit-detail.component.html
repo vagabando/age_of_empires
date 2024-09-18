@@ -1,1 +1,67 @@
-<p>unit-detail works!</p>
+<div class="m-t-10" fxLayout="row" fxLayout.xs="column">
+  <div fxFlex="100">
+    <h1 class="text-center">Unit Detail Page</h1>
+  </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column">
+  <div fxFlex="100">
+    <mat-card appearance="outlined">
+      <mat-card-content>
+
+        <ng-container *ngIf="selectedUnit$ | async as unit">
+          <mat-list role="list">
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">ID:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.id }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Name:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.name }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+
+              <div fxFlex.xs="50" fxFlex="12">Description:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.description }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12"> Min. Required Age:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.age }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12"> Wood Cost:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.cost?.Wood }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12"> Food Cost:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.cost?.Food }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Gold Cost:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.cost?.Gold }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Build Time:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.build_time }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Reload Time:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.reload_time }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Hit Points:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.hit_points }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Attack:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.attack }}</div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <div fxFlex.xs="50" fxFlex="12">Accuracy:</div>
+              <div fxFlex.xs="50" fxFlex="50">{{ unit?.accuracy }}</div>
+            </mat-list-item>
+          </mat-list>
+        </ng-container>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

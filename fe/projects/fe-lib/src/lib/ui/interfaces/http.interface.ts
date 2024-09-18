@@ -12,3 +12,7 @@ export interface IResponseCode {
 
 export type IResponseInfo<T = unknown> = Omit<IResponse<T>, 'success'>;
 export type IResponseError<T = unknown> = Omit<IResponse<T>, 'success'>;
+
+
+
+

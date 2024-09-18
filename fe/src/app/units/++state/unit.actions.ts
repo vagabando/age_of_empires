@@ -9,6 +9,7 @@ export const UnitActions = createActionGroup({
   events: {
     'Init Units': emptyProps(),
     'Load Units Success': props<{ units: Unit[] }>(),
+    'Set Unit': props<{ unit: Unit }>(),
     'Load Units Failure': props<{ error: IResponseError }>(),
     // 'Update Unit': props<{ units: Update<Unit> }>(),
     'Clear Units': emptyProps(),

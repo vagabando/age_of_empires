@@ -23,6 +23,7 @@ export interface Unit {
   search_radius?:number;
 }
 interface ICost {
-  Wood:number;
-  Gold:number;
+  Wood?:number;
+  Gold?:number;
+  Food?:number;
 }

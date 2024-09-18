@@ -4,7 +4,6 @@ import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import {UiModule} from "fe-lib";
 import {FlexModule} from "@angular/flex-layout";
-
 @NgModule({
   declarations: [
     MainComponent
@@ -13,7 +12,7 @@ import {FlexModule} from "@angular/flex-layout";
     CommonModule,
     MainRoutingModule,
     UiModule,
-    FlexModule
+    FlexModule,
   ]
 })
 export class MainModule { }
