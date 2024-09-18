@@ -22,7 +22,7 @@ export interface Unit {
   attack_bonus?:string[];
   search_radius?:number;
 }
-interface ICost {
+export interface ICost {
   Wood?:number;
   Gold?:number;
   Food?:number;

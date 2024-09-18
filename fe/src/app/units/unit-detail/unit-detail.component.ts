@@ -20,7 +20,7 @@ export class UnitDetailComponent implements OnInit {
     this.selectedUnit$.subscribe(_unit=>{
       if(!_unit) {
         this.units$.subscribe((units:Unit[]) => {
-          const unit:any  = units.find(u=> u.id === Number(this.activatedRoute.snapshot.params['id']))
+          const unit:Unit | undefined = units.find(u=> u.id === Number(this.activatedRoute.snapshot.params['id'])) as Unit
           this.store.dispatch(UnitActions.setUnit({unit}));
         })
       }
