@@ -35,7 +35,7 @@
                   <p>Costs</p>
                   <mat-list>
                     <ng-container *ngIf="costs$ | async as _costs;">
-                      <ng-container *ngFor="let cost of _costs">
+                      <ng-container *ngFor="let cost of _costs; let ind=index;">
                         <mat-list-item class="m-t-20">
                           <div fxFlex="10" fxFlex.xs="50" fxFlex.sm="50">
                             {{cost.value}}
@@ -43,7 +43,7 @@
                           </div>
                           <div fxFlex="10" fxFlex.xs="50" fxFlex.sm="50">
                             <mat-slider [disabled]="!cost.active"  min="0" max="200" step="5"  discrete >
-                              <input [value]="cost.value" (change)="changeCostHandler($event, cost)" matSliderThumb>
+                              <input [id]="'slider_'+(ind+1)" [value]="cost.value" (change)="changeCostHandler($event, cost)" matSliderThumb>
                             </mat-slider>
                           </div>
                         </mat-list-item>

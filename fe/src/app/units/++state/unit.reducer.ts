@@ -36,7 +36,7 @@ export const initialState: State = adapter.getInitialState({
   units: []
 });
 
-const reducer = createReducer(
+export const reducer = createReducer(
   initialState,
   on(UnitActions.loadUnitsSuccess,
     (state, action) => (

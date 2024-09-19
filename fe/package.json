@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "build:lib": "ng build fe-lib --configuration development",
     "build:lib:watch": "ng build fe-lib --watch --configuration=development",
-    "test": "ng test",
+    "test": "ng test --code-coverage",
     "lint": "ng lint"
   },
   "private": true,
