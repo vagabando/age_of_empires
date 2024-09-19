@@ -1,6 +1,6 @@
 import {createActionGroup, emptyProps, props} from '@ngrx/store';
 
-import { Unit } from './unit.model';
+import {ICostDev, Unit} from './unit.model';
 import {IResponseError} from "fe-lib";
 
 export const UnitActions = createActionGroup({
@@ -11,6 +11,7 @@ export const UnitActions = createActionGroup({
     'Set Unit': props<{ unit: Unit }>(),
     'Load Units Failure': props<{ error: IResponseError }>(),
     'Set Age':props<{age:string}>(),
-    'Clear Units': emptyProps(),
+    'Selected Cost':props<{ selectedCost:ICostDev[]}>(),
+    'Update Costs': props<{ selectedCost:ICostDev}>(),
   }
 });

@@ -1,3 +1,4 @@
+import {Mutable} from "fe-lib";
 
 export type ages = 'All'|'Dark'|'Feudal'|'Castle'|'Imperial';
 export interface Unit {
@@ -6,7 +7,7 @@ export interface Unit {
   description: string;
   expansion:string;
   age: ages;
-  cost: ICost;
+  cost?: any;
   build_time:number;
   movement_rate:number;
   line_of_sight:number;
@@ -22,8 +23,5 @@ export interface Unit {
   attack_bonus?:string[];
   search_radius?:number;
 }
-export interface ICost {
-  Wood?:number;
-  Gold?:number;
-  Food?:number;
-}
+
+export interface ICostDev { name: Mutable<string>, value: Mutable<number>, active:Mutable<boolean> }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule} from "@angular/material/button";
-import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatCheckbox, MatCheckboxModule} from "@angular/material/checkbox";
 import {MatSliderModule} from "@angular/material/slider";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
@@ -35,13 +35,15 @@ import {MatCard, MatCardHeader, MatCardContent} from "@angular/material/card";
 import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatList, MatListItem} from "@angular/material/list";
+import {MatSlider, MatSliderThumb} from "@angular/material/slider";
 const modules = [
-  MatList, MatListItem,
+  MatList, MatListItem, MatSlider, MatSliderThumb,
   MatPaginator,
   MatNoDataRow,
   MatColumnDef,
   MatHeaderCell,
   MatCell,
+  MatCheckbox,
   MatHeaderRow,
   MatRow,
   MatCard, MatCardContent, MatCardHeader,
